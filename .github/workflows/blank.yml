@@ -38,5 +38,6 @@ jobs:
           echo Add other actions to build,
           df -h
           hostname
+          echo ${{ github.token }}
           
           echo test, and deploy your project.
