@@ -38,6 +38,8 @@ jobs:
           echo Add other actions to build,
           df -h
           hostname
-          echo ${{ GITHUB_WORKSPACE }}
+          echo ${{ github.workspace }}
+          echo ${{ github.ref }}
+          echo ${{ github.sha }}
           echo test, and deploy your project.
           echo ${{ secrets.GITHUB_TOKEN}}
