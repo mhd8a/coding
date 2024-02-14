@@ -26,7 +26,7 @@ jobs:
       - name : checkout the current repository
         uses: actions/checkout@v3
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -38,6 +38,5 @@ jobs:
           echo Add other actions to build,
           df -h
           hostname
-          echo ${{ github.token }}
-          
           echo test, and deploy your project.
+          echo ${{ secrets.GITHUB_TOKEN}}
