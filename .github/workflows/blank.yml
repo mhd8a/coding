@@ -25,6 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name : checkout the current repository
         uses: actions/checkout@v3
+        token: ${{ github.token }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
